@@ -2,7 +2,9 @@ Lambda-Framework
 ================
 
 Open source simple PHP framework
-Work in progress
+
+#Work in progress
+
 Please visit wiki for documentation (currently available in polish only).
 
 ================
