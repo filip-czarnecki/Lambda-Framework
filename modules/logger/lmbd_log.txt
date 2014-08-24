@@ -1,0 +1,132 @@
+2013-12-29 14:06:27 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 14:06:28 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 14:10:03 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 14:12:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 15:48:13 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 15:48:24 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 16:07:49 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 16:48:03 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 16:59:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 16:59:16 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 16:59:18 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'logout')
+2013-12-29 16:59:22 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:03:14 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:03 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:10 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:12 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:16 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:32 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:04:35 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'logout')
+2013-12-29 17:04:36 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:06:45 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:09:36 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:10:10 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:10:22 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:10:58 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:13:17 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:13:17 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:13:34 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:29 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:14:29 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:31 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:14:31 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:49 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:14:49 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:52 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:53 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:14:53 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:14:55 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:14:55 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:16:42 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:16:42 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:20:03 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:20:03 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:22:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:22:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-29 17:22:21 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'members')
+2013-12-29 17:22:21 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nazwa' in 'field list' Query: select nazwa from psrnet_strony where (strona = 'main')
+2013-12-30 08:19:25 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2014-01-02 12:17:07 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select adres from strony where (strona = 'main')
+2014-01-02 12:17:07 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select nazwa from strony where (strona = 'main')
+2014-01-02 12:17:08 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select adres from strony where (strona = 'main')
+2014-01-02 12:17:08 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select nazwa from strony where (strona = 'main')
+2014-01-02 12:21:30 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select adres from strony where (strona = 'main')
+2014-01-02 12:21:30 | LMBD_WARNING | SQLSTATE[42S02]: Base table or view not found: 208 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid object name 'strony'. (SQLExecute[208] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select nazwa from strony where (strona = 'main')
+2014-01-07 12:16:53 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 207 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid column name 'lmbd_required'. (SQLExecute[207] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select * from OSOBY where (IMIE = 'Filip') and (NAZWISKO = 'Czarnecki') and (DATA_UR = '1991-08-21') and (lmbd_required = 'Array')
+2014-01-07 12:17:11 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 207 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid column name 'lmbd_required'. (SQLExecute[207] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select * from OSOBY where (IMIE = 'Filip') and (NAZWISKO = 'Czarnecki') and (DATA_UR = '1991-08-21') and (lmbd_required = 'Array')
+2014-01-07 12:42:13 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 207 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid column name 'Numer'. (SQLExecute[207] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select Numer PESEL from OSOBY where (IMIE = 'Filip') and (NAZWISKO = 'Czarnecki') and (DATA_UR = '1991-08-21')
+2014-01-07 12:42:14 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 207 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid column name 'Numer'. (SQLExecute[207] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select Numer PESEL from OSOBY where (IMIE = 'Filip') and (NAZWISKO = 'Czarnecki') and (DATA_UR = '1991-08-21')
+2014-01-07 12:43:36 | LMBD_WARNING | SQLSTATE[22007]: Invalid datetime format: 241 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Conversion failed when converting date and/or time from character string. (SQLExecute[241] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select PESEL from OSOBY where (IMIE = 'Filip') and (NAZWISKO = 'Czarnecki') and (DATA_UR = 'dupa')
+2014-01-07 15:39:40 | LMBD_WARNING | SQLSTATE[42S22]: Column not found: 207 [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Invalid column name 'hidden'. (SQLExecute[207] at /builddir/build/BUILD/php-5.3.23/ext/pdo_odbc/odbc_stmt.c:254) Query: select hidden,IMIE,PESEL from OSOBY where (IMIE = 'filip') and (NAZWISKO = 'czarnecki') and (DATA_UR = '1991-08-21')
+2014-01-16 12:56:34 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:35 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:37 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:38 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:38 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:39 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:39 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:39 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:39 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:39 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 12:56:40 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 13:00:05 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 13:00:05 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-16 13:00:05 | LMBD_ERROR | SQLSTATE[HY000] SQLConnect: 851968 [unixODBC][Microsoft][ODBC Driver 11 for SQL Server]Cannot generate SSPI context
+2014-01-29 15:46:07 | LMBD_CRITICAL | Invalid controller workmode
+2014-01-29 15:47:49 | LMBD_NOTICE | Cannot write to modules file
+2014-02-03 15:25:40 | LMBD_ERROR | could not find driver
+2014-03-14 12:38:32 | LMBD_NOTICE | No modules found
+2014-03-14 12:38:35 | LMBD_NOTICE | No modules found
+2014-03-14 12:39:13 | LMBD_NOTICE | No modules found
+2014-03-14 12:39:57 | LMBD_NOTICE | No modules found
+2014-03-16 12:40:41 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 12:40:44 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:20:18 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:21:40 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:23:11 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:23:35 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:23:40 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:27:23 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:33:17 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:34:24 | LMBD_NOTICE | No drivers found.
+2014-03-16 13:34:55 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-16 13:35:00 | LMBD_ERROR | SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2014-03-21 12:17:36 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:18:49 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:23 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:23 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:24 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:24 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:24 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:24 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-21 12:19:24 | LMBD_CRITICAL | Cannot load module icons_cutie<br />Minimal version required by dependency is 0.5, version installed is 0.4
+2014-03-26 15:30:04 | LMBD_CRITICAL | Cannot load module cache<br />Minimal version required by dependency is 0.5, version installed is 0.41
+2014-03-28 13:19:35 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:21:40 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:42 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:44 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:44 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:45 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:45 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:45 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:45 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:46 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:46 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:46 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:47 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:47 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:22:53 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:23:01 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:23:05 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:23:18 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 13:24:21 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-03-28 16:03:15 | LMBD_CRITICAL | Cannot load module model<br />Minimal version required by dependency is 0.5, version installed is 0.41
+2014-03-31 13:25:15 | LMBD_CRITICAL | Cannot load module cache<br />Minimal version required by dependency is 0.5, version installed is 0.42
+2014-04-01 09:53:09 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-04-01 09:53:14 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-04-01 09:57:35 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-04-01 09:57:38 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-04-01 09:57:38 | LMBD_NOTICE | Provided empty display data in view->setDisplay() function.
+2014-04-01 13:13:35 | LMBD_NOTICE | Template file appverse/templates/information.php does not exist.
+2014-04-01 13:15:01 | LMBD_NOTICE | Template file appverse/templates/information.php does not exist.

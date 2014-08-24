@@ -1,0 +1,7 @@
+name = "Appverse Server"
+type = "Application (Lambda MVC)"
+description = "Repository server for Appverse"
+icon = "appverse/appverse.png"
+author = "Filip Czarnecki"
+installer =
+package[] = appverse_server_model

@@ -1,0 +1,9 @@
+<ifModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+ RewriteRule ^mod-(.*)-(.*)-id(.*).html$ index.php?m=$1&p=$2&id=$3 [L]
+ RewriteRule ^mod-(.*)-id(.*).html$ index.php?m=$1&&id=$2 [L]
+ RewriteRule ^(.*)-id(.*).html$ index.php?p=$1&id=$2 [L]
+ RewriteRule ^mod-(.*)-(.*).html$ index.php?m=$1&p=$2 [L]
+ RewriteRule ^mod-(.*).html$ index.php?m=$1 [L]
+ RewriteRule ^(.*).html$ index.php?p=$1 [L]
