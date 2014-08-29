@@ -5,7 +5,6 @@ class View {
   private $abort;
   private $preview;
   private $theme;
-  private $theme_file = 'index.html';
   private $preview_flag = '<!-- LMBD_PREVIEW_FLAG -->';
   public $input;
   public $previous_area;
@@ -15,9 +14,6 @@ class View {
   
   public function setTheme($theme) {
     $this->theme = $theme;
-  }
-  public function setThemeFile($file) {
-    $this->theme_file = $file;
   }
   public function getTheme($theme) {
     return $this->theme;
@@ -171,24 +167,25 @@ class View {
         }
       }
       if(!isset($this->theme)) {
-        $this->theme = Config::read('view.default.theme');
+        $theme = Config::read('view.default.theme');
+        if($theme == null) {
+          exit();
+        }
+        else {
+          $this->theme = Config::read('view.default.theme');
+        }
       }
-      if(file_exists(Config::read('lmbd.modules.dir').'/theme_'.$this->theme.'/'.$this->theme_file)) {
-        $theme = file_get_contents(Config::read('lmbd.modules.dir').'/theme_'.$this->theme.'/'.$this->theme_file);
+      if(file_exists(Config::read('lmbd.modules.dir').'/theme_'.$this->theme.'/index.html')) {
+        $theme = file_get_contents(Config::read('lmbd.modules.dir').'/theme_'.$this->theme.'/index.html');
         $theme = str_replace('{{lmbd.modules.dir}}', Config::read('lmbd.modules.dir'), $theme);
         foreach($this->display_array as $area=>$content) {
-          if(strpos($theme, '<!-- lmbd:'.$area.' -->') === false) {
-            Logger::write('NOTICE','Area '.$area.' has been not defined in theme '.$this->theme.'.');
-          }
-          else {
-            $theme = str_replace('<!-- lmbd:'.$area.' -->', $content, $theme);
-          }
+          $theme = str_replace('<!-- lmbd:'.$area.' -->', $content, $theme);
         }
         $theme = str_replace('<!-- lmbd:title -->', '', $theme);
         echo $theme;
       }
       else {
-        Logger::write('ERROR','Theme file ('.$this->theme_file.') for theme '.$this->theme.' does not exist.');
+        Logger::write('ERROR','Theme file for theme '.$this->theme.' does not exist.');
       }
       $this->abortView();
     }

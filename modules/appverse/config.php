@@ -2,7 +2,7 @@
 
 #settings meant to be changed by developer
 
-Config::write('appverse.secret', '1');
+Config::write('appverse.secret', '');
 Config::write('appverse.default.repository', '');
 #lang
 

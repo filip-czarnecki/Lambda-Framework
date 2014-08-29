@@ -1,5 +1,5 @@
 <?php
 
-Config::writesafe('view.default.theme', 'default');
+Config::writesafe('view.default.theme', 'zsi2');
 
 ?>

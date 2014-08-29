@@ -227,21 +227,14 @@ class Frontend_framework implements iFrontend {
 		</div>
 		');
   }
-  public function forminput($name,$label,$placeholder="",$required=null,$helptext=null,$attribute="",$type="default",$class="md-9 md-3 form-group",$value="") {
-    $this->fields[$name] = array('type'=>'input-'.$type,'value'=>$value);
+  public function forminput($name,$label,$placeholder="",$required=null,$helptext=null,$attribute="",$type="default",$class="md-9",$value="") {
+    $this->fields[$name] = 'input-'.$type;
     $check = $this->check($name);
-    $class = explode(" ",$class);
-    if(!isset($class[1])) {
-      $class[1] = 'md-3';
-    }
-    if(!isset($class[2])) {
-      $class[2] = '';
-    }
     if(isset($check) && $check == "error") {
       $this->form_ready = false;
-      $this->view->display('<div class="'.$class[2].' has-error">
-        <label for="'.$name.'" id="label_'.$name.'" class="col-'.$class[1].' control-label">'.$label.'</label>
-        <div class="col-'.$class[0].'">
+      $this->view->display('<div class="form-group has-error">
+        <label for="'.$name.'" id="label_'.$name.'" class="col-md-3 control-label">'.$label.'</label>
+        <div class="col-'.$class.'">
       ');
     }
     else if(isset($check) || isset($this->fallback[$name])) {
@@ -251,15 +244,15 @@ class Frontend_framework implements iFrontend {
       else if(!empty($this->fallback[$name])) {
         $value = $this->fallback[$name];
       }
-      $this->view->display('<div class="'.$class[2].'">
-        <label for="'.$name.'" id="label_'.$name.'" class="col-'.$class[1].' control-label">'.$label.'</label>
-        <div class="col-'.$class[0].'">
+      $this->view->display('<div class="form-group">
+        <label for="'.$name.'" id="label_'.$name.'" class="col-md-3 control-label">'.$label.'</label>
+        <div class="col-'.$class.'">
       ');
     }
     else {
-      $this->view->display('<div class="'.$class[2].'">
-        <label for="'.$name.'" id="label_'.$name.'" class="col-'.$class[1].' control-label">'.$label.'</label>
-        <div class="col-'.$class[0].'">
+      $this->view->display('<div class="form-group">
+        <label for="'.$name.'" id="label_'.$name.'" class="col-md-3 control-label">'.$label.'</label>
+        <div class="col-'.$class.'">
       ');
     }
     if($type == "default") {
@@ -301,16 +294,12 @@ class Frontend_framework implements iFrontend {
     }
     $this->view->display('</div></div>');
   }
-  public function formselect($name,$label='',$val=null,$data,$required=null,$helptext=null,$attribute="",$sort=true,$class="md-9 md-3 form-group") {
-    $this->fields[$name] = array('type'=>'select','value'=>$val);
+  public function formselect($name,$label='',$val=null,$data,$required=null,$helptext=null,$attribute="",$sort=true) {
+    $this->fields[$name] = 'select';
     $check = $this->check($name);
-    $class = explode(" ",$class);
-    if(!isset($class[2])) {
-      $class[2] = '';
-    }
     if(strpos($attribute,'multiple') !== false) {
       $multiple = true;
-      if($val != null && !is_array($val)) {
+      if($val != null) {
         $attribute .= ' title="'.$val.'"';
       }
       $html_name = ''.$name.'[]';
@@ -324,8 +313,8 @@ class Frontend_framework implements iFrontend {
       $label_class = ' ';
     }
     else {
-      $column = '<div class="col-'.$class[0].'">';
-      $label_class = 'col-'.$class[1].' ';
+      $column = '<div class="col-md-9">';
+      $label_class = 'col-md-3 ';
     }
     
     if(empty($label)) {
@@ -337,13 +326,13 @@ class Frontend_framework implements iFrontend {
     
     if($check == "error") {
       $this->form_ready = false;
-      $this->view->display('<div class="'.$class[2].' has-error">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.' data-style="btn-danger">');
+      $this->view->display('<div class="form-group has-error">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.' data-style="btn-danger">');
     }
     else if(!empty($check) || $val != null) {
-      $this->view->display('<div class="'.$class[2].'">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.'>');
+      $this->view->display('<div class="form-group">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.'>');
     }
     else {
-      $this->view->display('<div class="'.$class[2].'">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.'>');
+      $this->view->display('<div class="form-group">'.$label_html.$column.'<select class="selectpicker" name="'.$html_name.'" id="'.$name.'" '.$attribute.'>');
     }
     if($sort == true) {
       asort($data);
@@ -360,34 +349,26 @@ class Frontend_framework implements iFrontend {
       $select = null;
     }
     foreach($data as $key => $value) {
-      $check = $this->check_select_value($value);
-      $value = $check[0];
-      $dataicon = $check[1];
-      
       if(is_array($select)) {
         if(in_array($key,$select)) {
-          $this->view->display('<option '.$dataicon.' value="'.$key.'" selected>'.$value.'</option>');
+          $this->view->display('<option value="'.$key.'" selected>'.$value.'</option>');
         }
         else {
-          $this->view->display('<option '.$dataicon.' value="'.$key.'">'.$value.'</option>');
+          $this->view->display('<option value="'.$key.'">'.$value.'</option>');
         }
       }
       else {
         if($key == $select) {
-          $this->view->display('<option '.$dataicon.' value="'.$key.'" selected>'.$value.'</option>');
+          $this->view->display('<option value="'.$key.'" selected>'.$value.'</option>');
           $selected = true;
         }
         else {
-          $this->view->display('<option '.$dataicon.' value="'.$key.'">'.$value.'</option>');
+          $this->view->display('<option value="'.$key.'">'.$value.'</option>');
         }
       }
     }
     if(($selected == false) && ($val != null) && ($multiple == false)) {
-      $check = $this->check_select_value($val);
-      $val = $check[0];
-      $this->fields[$name]['value'] = $val;
-      $dataicon = $check[1];
-      $this->view->display('<option '.$dataicon.' value="" data-hidden="true" selected>'.$val.'</option>');
+      $this->view->display('<option value="" selected>'.$val.'</option>');
     }
     $this->view->display('</select>');
     
@@ -410,25 +391,13 @@ class Frontend_framework implements iFrontend {
       }
     }
   }
-  private function check_select_value($value) {
-    if(!is_array($value) && strpos($value,'|') !== false) {
-      return explode('|', $value);
-    }
-    return array(0=>$value,1=>'');
-  }
   public function formhidden($name,$value) {
-    $this->fields[$name] = array('type'=>'hidden','value'=>$value);
+    $this->fields[$name] = 'hidden';
     $this->view->display('<input type="hidden" name="'.$name.'" value="'.$value.'">');
   }
   public function getfieldtype($name) {
-    if(isset($this->fields[$name]['type'])) {
-      return $this->fields[$name]['type'];
-    }
-    return null;
-  }
-  public function getfieldvalue($name) {
-    if(isset($this->fields[$name]['value'])) {
-      return $this->fields[$name]['value'];
+    if(isset($this->fields[$name])) {
+      return $this->fields[$name];
     }
     return null;
   }
@@ -461,7 +430,7 @@ class Frontend_framework implements iFrontend {
 			
 			$this->view->display('
 			$(\'#'.$field_change.'\').change(function() {
-		    $(\'#'.$field_dependent.'\').find(\'*\').not( ":contains(\''.$this->getfieldvalue($field_dependent).'\')" ).remove();
+		    $(\'#'.$field_dependent.'\').find(\'*\').not( ":contains(\'Wybierz\')" ).remove();
 			');
 			foreach($data as $data_key => $data_value) {
 				$this->view->display('
