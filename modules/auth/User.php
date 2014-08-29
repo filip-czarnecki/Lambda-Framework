@@ -23,11 +23,20 @@ class User {
     $this->privledges[$key] = $value;
     $this->rawdata['privledges'][$key] = $value;
   }
-  private function setUserGroup($value) {
+  public function setUserGroup($value) {
     $this->groups[] = $value;
     $this->rawdata['groups'][] = $value;
   }
-  public function addNewUser($user_array) {
+  public function addNewUser($user_array=null,$auto_apply=true) {
+    if($user_array == null) {
+      $user_array = $this->rawdata;
+      if(isset($user_array['groups'])) {
+        unset($user_array['groups']);
+      }
+      if(isset($user_array['privledges'])) {
+        unset($user_array['privledges']);
+      }
+    }
     $id_field = Config::read('auth.id.field');
     $this->model->dbh->startTransaction();
     $this->model->dbh->setTable(Config::read('auth.users.table'));
@@ -39,7 +48,9 @@ class User {
       foreach($this->groups as $group) {
         $this->model->dbh->insertData(array(Config::read('auth.user.field') => $this->$id_field, Config::read('auth.group.field') => $group));
       }
-      $this->model->dbh->applyTransaction();
+      if($auto_apply) {
+        $this->model->dbh->applyTransaction();
+      }
       return true;
     }
     return false;
@@ -102,7 +113,7 @@ class User {
       $groups = $this->model->dbh->selectData(array(Config::read('auth.authcode.field') => $authcode['id']));
       if(!empty($groups)) {
         foreach($groups as $group) {
-          $this->groups[] = $group[Config::read('auth.group.field')];
+          $this->setUserGroup($group[Config::read('auth.group.field')]);
         }
         if($this->getUserPrivledges()) {
           return true;
@@ -112,6 +123,7 @@ class User {
     return false;
   }
   public function checkNoDuplicate() {
+    #deprecated
     $this->model->dbh->setTable(Config::read('auth.users.table'));
     $login_field = Config::read('auth.login.field');
     if($this->model->dbh->selectCount(array($login_field => $this->$login_field)) == 0) {
