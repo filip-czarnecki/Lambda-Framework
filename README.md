@@ -31,6 +31,69 @@ Lambda Framework is a web application framework written in PHP and released unde
 - Util (utility library)
 - View (theming)
 
+## Creating Lambda MVC application ##
+1. Create application folder structure within modules folder (default: modules). You need to create following folders:
+	1. Controller folder (ex. modules/application)
+	2. Templates (view) folder, inside controller folder (ex. modules/application/templates)
+	3. Model folder with \_model after application name (ex. modules/application_model)
+2. Create module.ini file within application controller folder (modules/application/module.ini)
+```INI
+version = 1.0
+enabled = 1
+appcontroller = 1
+autoload = 1
+classname = ApplicationController
+dependency [template] = 0.5
+dependency [application_model] = 1.0
+lmbd_compatible = 0.5
+```
+3. Create application controller class file. The filename must be exactly as classname defined in module.ini with php extension, ex. ApplicationController.php (modules/application/ApplicationController.php)
+```PHP
+class ApplicationController implements iConstruct {
+  #When implementing iConstuct, init pseudocontructor is executed when all dependencies are ready
+  public function init() {
+    #Let's set default theme
+    $this >template >setTheme('default');
+    #And point to recently created template dir
+    $this >template >setTemplateDir('application/templates');
+    
+    #Now let's get some data from application model and pass it to view
+    $this->template->content = $this->applicationmodel->getContent();
+    #View simple template
+    $this->template->view('hello');
+  }
+}
+```
+
+4. Create simple template file inside templates file, ex. hello.php (modules/application/templates/hello.php)
+```PHP
+$this->view->setArea('body');
+$this->view->display($this->content);
+```
+
+5. Create module.ini file within application model folder (modules/application_model/module.ini)
+```INI
+version = 1.0
+enabled = 1
+autoload = 1
+inject = 1
+classname = ApplicationModel
+lmbd_compatible = 0.5
+```
+
+6. Create application model class file (modules/application_model/ApplicationModel.php)
+```PHP
+class ApplicationModel {
+  public function getContent() {
+    return 'Hello world!';
+  }
+}
+```
+
+7. Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
+
+
+
 © 2014 Filip Czarnecki
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
