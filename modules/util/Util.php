@@ -259,7 +259,10 @@ class Util {
     if(strlen($string) >= $maxlength) {
       return substr($string,0,$maxlength).$end;
     }
-    return $string;
+    return trim($string);
+  }
+  public static function strip_nl($string) {
+    return trim(preg_replace('/\s\s+/', ' ', $string));
   }
 }
 
