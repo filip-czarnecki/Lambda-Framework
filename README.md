@@ -96,7 +96,6 @@ class ApplicationModel {
 7) Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
 
 ## Configuring framework ##
-------------------
 
 ###Index file and modules directory###
 
@@ -135,6 +134,31 @@ inject | Whether module object should be injected to the modules which require i
 config | Configuration file name (without .php extension). Configuration file is included before module is called by the main controller
 dependency[module_name] | Array of the required modules with module name as key and minimal required version as value
 lmbd_compatible | Lambda Framework version required by the module
+
+**install.ini** files are used by the Appverse managing application. Available settings below:
+
+Name  | Description
+------------- | -------------
+name  | Module name
+type | Module category. Available categories: Application (Lambda MVC), Application (custom), DB drivers, Front end, Icon packs, Themes, Utilities
+description | Module description
+icon | Path to the module icon (256x256px recommended)
+author | Module author
+installer | Path to module installer (currently not usable)
+package[] | If module is an MVC application controller and requires for example model and common module, both should be defined here to insure they will be interpreted correctly by the Appverse
+
+**config.php** are used by the modules for storing their internal configuration. All configuration directives should be written by calling **Config::write(key,value)** static method.
+The most important config.php file is located in the controller folder and contains LMBDV1 controller configuration. Below are available settings for this file:
+
+Name  | Description | Default value
+------------- | ------------- | -------------
+lmbd.default.module | Default module (none if disabled) | none
+lmbd.default.module.force | Whether default module should be called ignoring any user calls (1 - enabled, 0 - disabled) | 0
+lmbd.controller.workmode | Main controller work mode (discovery, automatic or performance) | discovery
+lmbd.controller.scan.interval | Scan interval (in seconds), used by main controller only in automatic mode | 3600
+
+
+------------------
 
 © 2014 Filip Czarnecki
 
