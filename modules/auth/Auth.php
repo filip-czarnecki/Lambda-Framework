@@ -113,9 +113,9 @@ class Auth implements iConstruct {
         else {
           $rule = Config::read('auth.login.allowed');
           if($rule == null) {
-            $rule = '/[^A-Za-z0-9.#\\-$]/';
+            return true;
           }
-          if(preg_match($rule, $login) == false) {
+          else if(preg_match($rule, $login) == false) {
             return true;
           }
         }
@@ -185,6 +185,16 @@ class Auth implements iConstruct {
       $this->model->dbh->updateData(array($pass_field=>$hash,$salt_field=>$salt),array($id_field=>$this->user->$id_field));
     }
   }
+  public function checkUserExists($login) {
+    $this->model->dbh->setTable(Config::read('auth.users.table'));
+    $existing = $this->model->dbh->selectData(array(Config::read('auth.login.field') => $login),array(Config::read('auth.id.field')),true);
+    if(empty($existing)) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
   public function hash ($p, $s, $c=1000, $kl=32, $a="sha256") {
     #pbkdf2
     $hl = strlen(hash($a, null, true));
@@ -197,6 +207,22 @@ class Auth implements iConstruct {
       $dk .= $ib;
     }
     return base64_encode(substr($dk, 0, $kl));
+  }
+  public function get_group_users($group_id) {
+    $users = array();
+    if(is_numeric($group_id)) {
+      $this->model->dbh->setTable(Config::read('auth.users.table').'_'.Config::read('auth.groups.table'));
+      $users_id = $this->model->dbh->selectData(array(Config::read('auth.group.field') => $group_id));
+      $this->model->dbh->setTable(Config::read('auth.users.table'));
+      foreach($users_id as $user_id) {
+        $user_id = $user_id[Config::read('auth.user.field')];
+        $user = $this->model->dbh->selectData(array(Config::read('auth.id.field') => $user_id, Config::read('auth.active.field') => Config::read('auth.active.y.field')),null,true);
+        if(!empty($user)) {
+          $users[$user_id] = $user;
+        }
+      }
+    }
+    return $users;
   }
   public function is_same_user() {
     if (!isset($_SESSION['CREATED'])) {
@@ -219,6 +245,9 @@ class Auth implements iConstruct {
   public function logout() {
     if(isset($_SESSION['lmbd_auth'])) {
       unset($_SESSION['lmbd_auth']);
+    }
+    if(isset($_SESSION['FIRST_LOGIN'])) {
+      unset($_SESSION['FIRST_LOGIN']);
     }
   }
   public function check_page_old() {

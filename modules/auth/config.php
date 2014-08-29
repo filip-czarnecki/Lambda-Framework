@@ -1,6 +1,9 @@
 <?php
 
-Config::write('auth.login.field', 'email');
+Config::write('auth.login.minlength', 3);
+Config::write('auth.login.maxlength', 24);
+#Config::write('auth.login.allowed', '/[^A-Za-z0-9.#\\-$]/');
+Config::write('auth.login.field', 'login');
 Config::write('auth.pass.field', 'haslo');
 Config::write('auth.salt.field', 'sol');
 Config::write('auth.privledge.field', 'uprawnienie');
