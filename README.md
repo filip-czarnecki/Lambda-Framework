@@ -96,23 +96,24 @@ class ApplicationModel {
 7) Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
 
 ## Configuring framework ##
+------------------
 
-**Index file and modules directory**
+###Index file and modules directory###
 
 Index (index.php) is an entry file, called by user and responsible for calling Lambda Framework main controller called LMBDV1. Currently it has only one configurable value: "modules_dir" which contains modules folder path and defaults to "modules".
 
-**URL rewriting**
+###URL rewriting###
 
 Lambda Framework provides default .htaccess file with some basic rules for URL rewriting. Of course you can customize this file and move its content to the apache main configuration file (if you are using apache and have access).
 You can pass to the index file three parameters:
 
 Parameter  | Used by | Description
-------------- | ------------- | ------------- |
-m  | LMBDV1 Controller | Module name (must be appcontroller) |
-p | Application (via Router) | Page name |
-id | Application (via Router) | Additional parameters separated by @ |
+------------- | ------------- | ------------- 
+m  | LMBDV1 Controller | Module name (must be appcontroller) 
+p | Application (via Router) | Page name 
+id | Application (via Router) | Additional parameters separated by @ 
 
-**Configuration files**
+###Configuration files###
 
 There are three types of configuration files:
 
@@ -120,6 +121,20 @@ There are three types of configuration files:
 - install.ini files
 - config.php files
 
+**module.ini** files are used mainly by the LMBVD1 controller, only if the controller works in discovery mode.
+Available settings below:
+
+Name  | Description
+------------- | -------------
+version  | Module version (must be decimal)
+enabled  | Tells if module is enabled or not (1 - enabled, 0 - disabled)
+autoload | Whether module object should be created automatically by the main controller and added to its pool (1 - enabled, 0 - disabled)
+appcontroller | Whether module is application controller. Application controller objects are always automatically created by the main controller  (1 - enabled, 0 - disabled)
+classname | Classname of the main module class, must be the same as the filename
+inject | Whether module object should be injected to the modules which require it (1 - yes, 0 - no)
+config | Configuration file name (without .php extension). Configuration file is included before module is called by the main controller
+dependency[module_name] | Array of the required modules with module name as key and minimal required version as value
+lmbd_compatible | Lambda Framework version required by the module
 
 © 2014 Filip Czarnecki
 
