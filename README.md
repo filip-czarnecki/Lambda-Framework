@@ -32,11 +32,11 @@ Lambda Framework is a web application framework written in PHP and released unde
 - View (theming)
 
 ## Creating Lambda MVC application ##
-1. Create application folder structure within modules folder (default: modules). You need to create following folders:
-	1. Controller folder (ex. modules/application)
-	2. Templates (view) folder, inside controller folder (ex. modules/application/templates)
-	3. Model folder with \_model after application name (ex. modules/application_model)
-2. Create module.ini file within application controller folder (modules/application/module.ini)
+1) Create application folder structure within modules folder (default: modules). You need to create following folders:
+	a) Controller folder (ex. modules/application)
+	b) Templates (view) folder, inside controller folder (ex. modules/application/templates)
+	c) Model folder with \_model after application name (ex. modules/application_model)
+2) Create module.ini file within application controller folder (modules/application/module.ini)
 ```INI
 version = 1.0
 enabled = 1
@@ -47,7 +47,7 @@ dependency [template] = 0.5
 dependency [application_model] = 1.0
 lmbd_compatible = 0.5
 ```
-3. Create application controller class file. The filename must be exactly as classname defined in module.ini with php extension, ex. ApplicationController.php (modules/application/ApplicationController.php)
+3) Create application controller class file. The filename must be exactly as classname defined in module.ini with php extension, ex. ApplicationController.php (modules/application/ApplicationController.php)
 ```PHP
 class ApplicationController implements iConstruct {
   #When implementing iConstuct, init pseudocontructor is executed when all dependencies are ready
@@ -65,13 +65,13 @@ class ApplicationController implements iConstruct {
 }
 ```
 
-4. Create simple template file inside templates file, ex. hello.php (modules/application/templates/hello.php)
+4) Create simple template file inside templates file, ex. hello.php (modules/application/templates/hello.php)
 ```PHP
 $this->view->setArea('body');
 $this->view->display($this->content);
 ```
 
-5. Create module.ini file within application model folder (modules/application_model/module.ini)
+5) Create module.ini file within application model folder (modules/application_model/module.ini)
 ```INI
 version = 1.0
 enabled = 1
@@ -81,7 +81,7 @@ classname = ApplicationModel
 lmbd_compatible = 0.5
 ```
 
-6. Create application model class file (modules/application_model/ApplicationModel.php)
+6) Create application model class file (modules/application_model/ApplicationModel.php)
 ```PHP
 class ApplicationModel {
   public function getContent() {
@@ -90,7 +90,7 @@ class ApplicationModel {
 }
 ```
 
-7. Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
+7) Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
 
 
 
