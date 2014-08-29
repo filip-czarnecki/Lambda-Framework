@@ -67,6 +67,9 @@ class ApplicationController implements iConstruct {
 
 4) Create simple template file inside templates file, ex. hello.php (modules/application/templates/hello.php)
 ```PHP
+$this->view->setArea('title');
+$this->view->display('Some title');
+
 $this->view->setArea('body');
 $this->view->display($this->content);
 ```
