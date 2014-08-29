@@ -31,7 +31,7 @@ Lambda Framework is a web application framework written in PHP and released unde
 - Util (utility library)
 - View (theming)
 
-## Creating Lambda MVC application ##
+## Creating simple Lambda MVC application ##
 1) Create application folder structure within modules folder (default: modules). You need to create following folders:
 	a) Controller folder (ex. modules/application)
 	b) Templates (view) folder, inside controller folder (ex. modules/application/templates)
@@ -43,8 +43,8 @@ enabled = 1
 appcontroller = 1
 autoload = 1
 classname = ApplicationController
-dependency [template] = 0.5
-dependency [application_model] = 1.0
+dependency[template] = 0.5
+dependency[application_model] = 1.0
 lmbd_compatible = 0.5
 ```
 3) Create application controller class file. The filename must be exactly as classname defined in module.ini with php extension, ex. ApplicationController.php (modules/application/ApplicationController.php)
@@ -95,6 +95,30 @@ class ApplicationModel {
 
 7) Now you can run the application in the browser. If you are seeing Appverse instead of your application, disable Appverse or set your application as default (lmbd.default.module) in modules/controller/config.php
 
+## Configuring framework ##
+
+**Index file and modules directory**
+
+Index (index.php) is an entry file, called by user and responsible for calling Lambda Framework main controller called LMBDV1. Currently it has only one configurable value: "modules_dir" which contains modules folder path and defaults to "modules".
+
+**URL rewriting**
+
+Lambda Framework provides default .htaccess file with some basic rules for URL rewriting. Of course you can customize this file and move its content to the apache main configuration file (if you are using apache and have access).
+You can pass to the index file three parameters:
+
+Parameter  | Used by | Description
+------------- | ------------- | ------------- |
+m  | LMBDV1 Controller | Module name (must be appcontroller) |
+p | Application (via Router) | Page name |
+id | Application (via Router) | Additional parameters separated by @ |
+
+**Configuration files**
+
+There are three types of configuration files:
+
+- module.ini files
+- install.ini files
+- config.php files
 
 
 © 2014 Filip Czarnecki
