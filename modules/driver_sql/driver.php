@@ -80,11 +80,11 @@ class driver_sql implements iDriver {
           else if($option == '<>') {
             $return_array['sign'] = "between";
             $return_array['placeholder'] = "? and ?";
-            $return_array['value'] = array($return_array['value'],$return_array['value']);
+            $return_array['value'] = explode('-',$value);
           }
           else if($option == 'in') {
             $return_array['sign'] = $option;
-            $return_array['value'] = explode(',',$return_array['value']);
+            #$return_array['value'] = explode(',',$return_array['value']);
             $return_array['placeholder'] = '(';
             for($i=1;$i<=count($return_array['value']);$i++) {
               $return_array['placeholder'] .= '?,';
