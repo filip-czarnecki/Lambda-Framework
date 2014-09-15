@@ -2,15 +2,9 @@
 
 class Model {
   public function __construct() {
-    require_once(Config::read('lmbd.modules.dir').'/model/DBHMagic.php');
+    #require_once(Config::read('lmbd.modules.dir').'/model/DBHMagic.php');
     require_once(Config::read('lmbd.modules.dir').'/model/iDriver.php');
-    if(Config::read('model.configuration.source') == null) {
-      $source = 'model/drivers_enabled.php';
-    }
-    else {
-      $source = Config::read('model.configuration.source');
-    }
-    require_once(Config::read('lmbd.modules.dir').'/'.$source);
+    require_once(Config::read('lmbd.modules.dir').'/'.Config::read('model.configuration.source'));
     $drivers_enabled = json_decode($drivers_enabled);
     if(!empty($drivers_enabled)) {
       foreach($drivers_enabled as $count => $driver) {
@@ -35,8 +29,8 @@ class Model {
           else {
             $event = null;
           }
-          $driver = new $driver_name($driver->host,$driver->port,$driver->name,$driver->user,$driver->pass,$driver->pref);
-          $this->$dbh = new DBHMagic($dbh,$driver,$event);
+          $this->$dbh = new $driver_name($driver->host,$driver->port,$driver->name,$driver->user,$driver->pass,$driver->pref);
+          #$this->$dbh = new DBHMagic($dbh,$driver,$event);
         }
       }
     }
