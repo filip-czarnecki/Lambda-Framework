@@ -13,11 +13,18 @@ class Util {
     $return_array = array();
     foreach($data as $piece) {
       if($exclude != null) {
-        if(stripos($piece[$value],$exclude) !== false) {
+        if(is_array($exclude)) {
+          foreach($exclude as $element) {
+            if(stripos($piece[$value],$element) !== false) {
+              continue;
+            }
+          }
+        }
+        else if(stripos($piece[$value],$exclude) !== false) {
           continue;
         }
       }
-      else if($exclude_empty) {
+      if($exclude_empty) {
         if(empty($piece[$value])) {
           continue;
         }
